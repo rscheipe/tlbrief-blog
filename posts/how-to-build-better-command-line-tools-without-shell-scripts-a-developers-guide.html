@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Build Better Command-Line Tools Without Shell Scripts: A Developer's Guide | TL;Brief Blog</title>
+<meta name="description" content="Learn how modern developers are replacing shell scripts with robust CLI tools. Practical tips for building faster, more maintainable command-line applications.">
+<meta property="og:title" content="How to Build Better Command-Line Tools Without Shell Scripts: A Developer's Guide">
+<meta property="og:description" content="Learn how modern developers are replacing shell scripts with robust CLI tools. Practical tips for building faster, more maintainable command-line applications.">
+<meta property="og:type" content="article">
+<meta name="keywords" content="build command line tools without shell scripts, TL;Brief, article summarizer, reading tool">
+<link rel="canonical" href="https://blog.tl-brief.com/posts/how-to-build-better-command-line-tools-without-shell-scripts-a-developers-guide.html">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#0a0b0e;color:#c8ccd8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+       line-height:1.7;padding:0;}
+  .nav{background:#060709;border-bottom:1px solid #1a1d26;padding:14px 24px;display:flex;
+        align-items:center;justify-content:space-between;}
+  .nav-brand{color:#00e676;font-weight:700;font-size:16px;text-decoration:none;}
+  .nav-cta{background:#00e676;color:#000;padding:8px 18px;border-radius:6px;font-size:13px;
+            font-weight:700;text-decoration:none;}
+  .hero{background:#060709;border-bottom:1px solid #1a1d26;padding:48px 24px 36px;}
+  .hero-inner{max-width:740px;margin:0 auto;}
+  .vertical-tag{display:inline-block;background:#1a1d26;color:#00e676;border:1px solid #00e676;
+                 border-radius:20px;padding:3px 12px;font-size:11px;letter-spacing:1px;
+                 text-transform:uppercase;margin-bottom:16px;}
+  h1{color:#eef0f6;font-size:clamp(22px,4vw,34px);line-height:1.25;margin-bottom:12px;}
+  .meta{font-size:12px;color:#5a5e78;margin-top:8px;}
+  .article{max-width:740px;margin:40px auto;padding:0 24px 60px;}
+  .article p{margin-bottom:20px;font-size:16px;}
+  .article p:first-child{font-size:17px;color:#eef0f6;}
+  .cta-box{background:#0d0f14;border:1px solid #00e676;border-radius:12px;padding:28px;
+            margin:40px 0;text-align:center;}
+  .cta-box h3{color:#eef0f6;margin-bottom:8px;font-size:18px;}
+  .cta-box p{color:#5a5e78;font-size:14px;margin-bottom:18px;}
+  .cta-btn{display:inline-block;background:#00e676;color:#000;padding:14px 32px;
+            border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;}
+  footer{background:#060709;border-top:1px solid #1a1d26;padding:20px 24px;
+          text-align:center;font-size:12px;color:#5a5e78;}
+  footer a{color:#00e676;text-decoration:none;}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="https://blog.tl-brief.com" class="nav-brand">TL;Brief Blog</a>
+  <a href="https://chromewebstore.google.com/detail/jejmkbenbijhendaefibgfdlkoofgkom" class="nav-cta">Get Free Extension →</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="vertical-tag">Other</span>
+    <h1>How to Build Better Command-Line Tools Without Shell Scripts: A Developer's Guide</h1>
+    <div class="meta">Published 2026-03-08 · Free resource from TL;Brief</div>
+  </div>
+</div>
+
+<article class="article">
+<p>If you've ever spent hours debugging a shell script that worked yesterday but breaks today, you're not alone. Many developers are reaching the same breaking point with traditional CLI workflows, much like how Anhelina Kalinina and other developers in the open-source community have been pushing for better tooling solutions. The good news? There are better ways to build command-line tools that don't require wrestling with bash or shell compatibility issues.</p>
+<p>The core problem is that shell scripts are fragile. They're environment-dependent, hard to test, and painful to maintain as they grow. When you're building applications that need to integrate fuzzy-finding capabilities or complex filtering logic, calling a shell script from your application is like tying your program's reliability to a house of cards. This is why many experienced developers are turning to languages like Rust and proper libraries instead of treating shell as their programming language.</p>
+<p>One practical approach gaining traction is using purpose-built libraries designed specifically for CLI integration. Instead of shelling out to fzf and hoping it behaves consistently across different systems, you can embed fuzzy-finding logic directly into your application with a proper SDK. This means your tool works the same way on Linux, macOS, and Windows. Configuration becomes predictable through structured formats like TOML instead of environment variables and shell aliases that differ between machines. You also get proper error handling, logging, and the ability to test your CLI behavior without relying on external command-line tools.</p>
+<p>Another practical consideration is choosing the right language for your use case. Rust has become increasingly popular for CLI tools because it compiles to a single binary, eliminating dependency headaches. Go is another solid choice if you value development speed. Both languages have mature libraries for building interactive command-line experiences. The key is picking a language where your team already has expertise—don't optimize for theoretical benefits if it means your team is learning a new language just to maintain a tool.</p>
+<p>Starting small also matters. You don't need to rewrite your entire CLI suite tomorrow. Begin by identifying one problematic shell script—the one that breaks most often or requires the most maintenance. Rebuild just that piece as a proper CLI application. This gives you real data about whether the migration actually saves time for your team. Often, what seems like more upfront work pays dividends in reduced debugging and deployment issues.</p>
+<p>The transition from shell scripts to proper CLI applications isn't about being a purist; it's about practical maintenance. When you have time-sensitive work and need reliable tools, robust code that you can test properly beats clever shell one-liners every time. If you're reading technical documentation to understand these concepts better, TL;Brief's free Chrome extension can save you time by summarizing those lengthy articles in one click.</p>
+
+<div class="cta-box">
+  <h3>Stop reading everything. Read what matters.</h3>
+  <p>TL;Brief summarizes any article or webpage into 3 sentences and key takeaways — free, one click, works everywhere.</p>
+  <a href="https://chromewebstore.google.com/detail/jejmkbenbijhendaefibgfdlkoofgkom" class="cta-btn">Add to Chrome — Free</a>
+</div>
+</article>
+
+<footer>
+  <a href="https://blog.tl-brief.com">← All Posts</a> &nbsp;·&nbsp;
+  <a href="https://chromewebstore.google.com/detail/jejmkbenbijhendaefibgfdlkoofgkom">Get TL;Brief Free</a> &nbsp;·&nbsp;
+  © TL;Brief
+</footer>
+</body>
+</html>
